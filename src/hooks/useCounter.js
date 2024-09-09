@@ -8,7 +8,7 @@ export const useCounter = (initialValue = 0) => {
         setCounter(counter + value)
     }
     const decrease = (value = 1) => {
-        setCounter(counter - value)
+        setCounter(Math.max(counter - value, 0))
     }
     const reset = () => {
         setCounter(0)
